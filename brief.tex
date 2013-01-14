@@ -1,0 +1,42 @@
+\documentclass[foldmarks=on,%  Faltmarken setzen
+               paper=a4,%      Papierformat
+               fromphone=off,%  Telefonnummer im Absender
+               fromrule=off,%  keine Linie unter Absender
+               fromfax=off,%   Faxnummer
+               fromemail=on,%  Emailadresse
+               fromurl=off,%   Homepage
+  subject=beforeopening%  Plazierung der Betreffzeile
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[scaled]{helvet}
+\usepackage{lmodern}
+\begin{document}
+% Absender-Adresse
+\setkomavar{fromname}{Max Mustermann}
+\setkomavar{fromaddress}{Mustermannstra\ss{}e \\ 12345 Musterhausen}
+\setkomavar{fromphone}{012345678901}
+\setkomavar{fromemail}{max.mustermann@beispiel.de}
+\setkomavar{subject}{Betreff: Hier Betreff eintragen}
+\setkomavar{backaddressseparator}{%
+~\raisebox{0.25ex}{\textbf{\Large.}}~}
+\setkomafont{backaddress}{\sffamily\tiny}
+
+\begin{letter}{%         Empfaenger-Adresse
+Empf\"anger \\  
+Postfach 12 34 56 \\ 
+12345 Musterhausen
+}
+
+\opening{Sehr geehrte Damen  und Herren,}% Anrede
+
+Hier den Text des Briefes einf\"ugen.
+
+\closing{Mit freundlichen Gr\"u\ss{}en,}
+
+%\ps was ich noch sagen wollte
+
+%\cc{an alle Interessenten}
+\end{letter}
+\end{document}
